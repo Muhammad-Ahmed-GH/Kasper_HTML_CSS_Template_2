@@ -56,8 +56,13 @@ ul {
 /* end global rules */
 /* start header */
 header {
-  /* padding: 30px; */
   color: white;
+  position: absolute;
+  /* the landing is behind the header */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 header .container {
@@ -65,6 +70,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  min-height: 97px;
 }
 
 header .container::after {
@@ -77,7 +83,7 @@ header .container::after {
   left: 15px;
 }
 
-header img {
+header .logo img {
   height: 40px;
 }
 
@@ -86,8 +92,45 @@ header nav {
   align-items: center;
 }
 
+header nav .toggle-menu {
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  header nav .toggle-menu {
+    display: none;
+  }
+}
+
 header nav ul {
   display: flex;
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+
+  header nav .toggle-menu:hover+ul {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  header nav .toggle-menu:hover+ul li a {
+    padding: 15px;
+  }
+
+  /* or using the important flag */
+  /*
+  header nav ul li a {
+    padding: 15px !important;
+  }
+  */
 }
 
 header nav ul li a {
