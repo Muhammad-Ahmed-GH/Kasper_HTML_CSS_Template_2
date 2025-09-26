@@ -437,3 +437,193 @@ header nav form i {
 }
 
 /* end design */
+/* start portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio .shuffle li {
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.portfolio .shuffle li.active {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.portfolio .gallery .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .gallery .box img {
+  display: block;
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+
+.portfolio .gallery .box:hover img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.portfolio .gallery .box .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  text-transform: capitalize;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.portfolio .gallery .box:hover .text {
+  transform: translateY(-100%);
+}
+
+.portfolio .gallery .box .text p:last-of-type {
+  color: var(--main-color);
+  padding-top: 10px;
+}
+
+.portfolio .more-btn {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.portfolio .more-btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 30px auto;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+/* end portfolio */
+/* start video */
+.video {
+  position: relative;
+}
+
+.video::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.video video {
+  width: 100%;
+  /* read about aspect-ratio */
+  display: block;
+  /* that was to make its container's height the same as it */
+  /* inline elements can make its container a little bit larger */
+  /* now the .video height = the video height */
+}
+
+.video .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  text-align: center;
+  color: white;
+  background-color: var(--transparent-main-color);
+}
+
+.video .text h2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+@media (max-width: 440px) {
+  .video .text {
+    transform: none;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video .text h2 {
+    font-size: 1.1em;
+  }
+}
+
+.video .text p {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.video .text a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.video .text a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* end video */
+/* start about */
+.about {
+  padding-top: var(--section-padding);
+  overflow: hidden;
+  text-align: center;
+}
+
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  /* this is a trick. we don't want a part of the image to appear --> bottom: -120px */
+  /* then, a larger space became between the heading and the image */
+  /* so we used margin-top: -120px with the same 120px to subtract this distance */
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .about img {
+    bottom: -60px;
+    margin-top: -60px;
+  }
+
+  /* in smaller screens, the image will shrink not to get out of the section */
+  /* then, 120px will cut a big portion of the image */
+}
+
+/* end about */
