@@ -630,3 +630,69 @@ header nav form i {
 }
 
 /* end about */
+/* start stats */
+.stats {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: #b300ff;
+  background-image: url('../images/stats.png');
+  background-size: cover;
+  position: relative;
+}
+.stats::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.stats .container .box {
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-main-color);
+  text-align: center;
+}
+/* mobile first principle */
+/* here, the property won't be overridden much in media */
+/* the mobile media will end at 767px, its stylings won't bother us later */
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+.stats .container .box i {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stats .container .box p:first-of-type {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.stats .container .box p:last-child {
+  font-size: 14px;
+}
+/* end stats */
