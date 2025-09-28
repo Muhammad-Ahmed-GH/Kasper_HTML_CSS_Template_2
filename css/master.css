@@ -828,17 +828,22 @@ header nav form i {
   display: flex;
   justify-content: center;
   gap: 50px;
+  position: relative;
 }
 .subscribe .email-field {
   display: flex;
   border: 1px white solid;
   position: relative;
+  flex: 310;
 }
 .subscribe input[type='text'] {
   padding: 20px 20px 20px 60px;
   background-color: transparent;
   border: none;
   outline: none;
+  color: white;
+  caret-color: white;
+  flex: 1;
 }
 .subscribe input[type='text']::placeholder {
   color: white;
@@ -851,5 +856,17 @@ header nav form i {
   transform: translateY(-50%);
   left: 25px;
   font-size: 1.2em;
+}
+.subscribe input[type='submit'] {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  width: 130px;
+  padding: 10px 20px;
+}
+.subscribe p {
+  color: white;
+  flex: 3;
 }
 /* end subscribe */
