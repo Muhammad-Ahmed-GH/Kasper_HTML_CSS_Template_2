@@ -706,6 +706,246 @@ header nav form i {
 }
 
 /* end stats */
+/* start pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pricing .plans .plan>* {
+  border-top: 1px var(--main-color) solid;
+}
+
+.pricing .plans .plan .plan-heading {
+  padding: 40px 20px;
+}
+
+.pricing .plans .plan .plan-heading .plan-name {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.pricing .plans .plan .plan-heading .plan-price {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.pricing .plans .plan .plan-heading .plan-price::before {
+  content: '$';
+  position: relative;
+  font-size: 25px;
+  font-weight: normal;
+  top: -40px;
+  margin-right: 15px;
+}
+
+.pricing .plans .plan .plan-heading .plan-price::after {
+  content: '/Mo';
+  position: relative;
+  font-size: 20px;
+  right: -15px;
+}
+
+.pricing .plans .plan .plan-details p {
+  padding: 20px;
+  position: relative;
+}
+
+.pricing .plan .plan-details p:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: var(--main-color);
+}
+
+.pricing .plan .buy-btn {
+  padding: 30px 0;
+}
+
+.pricing .plan .buy-btn a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.pricing .contact-msg {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+
+.pricing .contact-msg+a {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/* end pricing */
+/* start subscribe */
+.subscribe {
+  background-color: darkblue;
+  background-image: url('../images/subscribe.jpg');
+  background-size: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+}
+.subscribe::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.subscribe .container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+}
+.subscribe .email-field {
+  display: flex;
+  border: 1px white solid;
+  position: relative;
+  flex: 310;
+}
+.subscribe input[type='text'] {
+  padding: 20px 20px 20px 60px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  caret-color: white;
+  flex: 1;
+}
+.subscribe input[type='text']::placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+.subscribe .email-field i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 1.2em;
+}
+.subscribe input[type='submit'] {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  width: 130px;
+  padding: 10px 20px;
+}
+.subscribe p {
+  color: white;
+  flex: 3;
+}
+/* end subscribe */
+/* start stats */
+.stats {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: #b300ff;
+  background-image: url('../images/stats.png');
+  background-size: cover;
+  position: relative;
+}
+
+.stats::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stats .container .box {
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-main-color);
+  text-align: center;
+}
+
+/* mobile first principle */
+/* here, the property won't be overridden much in media */
+/* the mobile media will end at 767px, its stylings won't bother us later */
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+
+.stats .container .box i {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats .container .box p:first-of-type {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.stats .container .box p:last-child {
+  font-size: 14px;
+}
+
+/* end stats */
 /* start quote */
 .quote {
   padding-top: var(--section-padding);
