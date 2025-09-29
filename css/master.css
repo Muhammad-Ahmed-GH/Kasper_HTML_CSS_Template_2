@@ -1042,34 +1042,41 @@ header nav form i {
   /* flex-basis: 500px; */
   flex-basis: 45%;
 }
+
 .our-skills h3 {
   margin: 0 0 30px;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
+
 .our-skills h3+p {
   color: #777;
   line-height: 2;
   text-align: center;
   margin-bottom: 60px;
 }
+
 .our-skills .cards .card {
   display: flex;
   gap: 50px;
   align-items: center;
 }
+
 .our-skills .cards .card:not(:last-child) {
   margin-bottom: 30px;
 }
+
 .our-skills .cards .card img {
   width: 100px;
   border-radius: 50%;
 }
+
 .our-skills .cards .card .text {
   line-height: 1.8;
   border-bottom: 1px solid #ccc;
 }
+
 .our-skills .cards .card .text .author {
   display: block;
   color: #777;
@@ -1077,6 +1084,7 @@ header nav form i {
   font-size: 14px;
   margin-bottom: 10px;
 }
+
 .our-skills .bullets {
   display: flex;
   justify-content: center;
@@ -1099,21 +1107,25 @@ header nav form i {
 .our-skills .skills {
   flex-basis: 500px;
 }
+
 .our-skills .skills .bars {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+
 .our-skills .skills .bars li span {
   text-transform: uppercase;
 }
+
 .our-skills .skills .bars li .bar {
   background-color: #dedadc;
   height: 30px;
   margin-top: 15px;
   position: relative;
 }
-.our-skills .skills .bars li .bar::before {
+
+.our-skills .skills .bars li .bar .progress {
   content: '';
   height: 100%;
   position: absolute;
@@ -1121,14 +1133,37 @@ header nav form i {
   top: 0;
   background-color: var(--main-color);
 }
-.our-skills .skills .bars li .bar[progress='90%']::before {
+
+.our-skills .skills .bars li .bar .progress[value='90%'] {
   width: 90%;
 }
-.our-skills .skills .bars li .bar[progress='85%']::before {
+
+.our-skills .skills .bars li .bar .progress[value='85%'] {
   width: 85%;
 }
-.our-skills .skills .bars li .bar[progress='80%']::before {
+
+.our-skills .skills .bars li .bar .progress[value='80%'] {
   width: 80%;
+}
+.our-skills .skills .bars li .bar .progress::before {
+  content: attr(value);
+  position: absolute;
+  bottom: calc(100% + 15px);
+  right: 0;
+  transform: translateX(50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.our-skills .skills .bars li .bar .progress::after {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 5px);
+  right: 0;
+  transform: translateX(50%);
+  border: 5px transparent solid;
+  border-top-color: black;
 }
 
 /* end our skills */
