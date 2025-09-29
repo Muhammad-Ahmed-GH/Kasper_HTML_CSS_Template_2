@@ -455,11 +455,21 @@ header nav form i {
 .portfolio .shuffle li {
   padding: 10px;
   text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio .shuffle li:hover {
+  background-color: #eee;
 }
 
 .portfolio .shuffle li.active {
   color: white;
   background-color: var(--main-color);
+}
+
+.portfolio .shuffle li:hover.active {
+  background-color: #01b0e0;
 }
 
 .portfolio .gallery {
@@ -475,11 +485,14 @@ header nav form i {
 .portfolio .gallery .box img {
   display: block;
   max-width: 100%;
-  transition: transform 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  filter: brightness(0.9);
 }
 
 .portfolio .gallery .box:hover img {
   transform: scale(1.1) rotate(3deg);
+  filter: brightness(1);
 }
 
 .portfolio .gallery .box .text {
@@ -503,11 +516,6 @@ header nav form i {
 }
 
 .portfolio .more-btn {
-  text-align: center;
-  padding-top: 30px;
-}
-
-.portfolio .more-btn {
   background-color: var(--main-color);
   color: white;
   padding: 15px 20px;
@@ -519,6 +527,14 @@ header nav form i {
   display: block;
   width: fit-content;
   text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.portfolio .more-btn:hover {
+  background-color: white;
+  color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 /* end portfolio */
@@ -706,246 +722,6 @@ header nav form i {
 }
 
 /* end stats */
-/* start pricing */
-.pricing {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
-
-.pricing .plans {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.pricing .plans .plan {
-  background-color: #fcfcfc;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.pricing .plans .plan>* {
-  border-top: 1px var(--main-color) solid;
-}
-
-.pricing .plans .plan .plan-heading {
-  padding: 40px 20px;
-}
-
-.pricing .plans .plan .plan-heading .plan-name {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
-.pricing .plans .plan .plan-heading .plan-price {
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.pricing .plans .plan .plan-heading .plan-price::before {
-  content: '$';
-  position: relative;
-  font-size: 25px;
-  font-weight: normal;
-  top: -40px;
-  margin-right: 15px;
-}
-
-.pricing .plans .plan .plan-heading .plan-price::after {
-  content: '/Mo';
-  position: relative;
-  font-size: 20px;
-  right: -15px;
-}
-
-.pricing .plans .plan .plan-details p {
-  padding: 20px;
-  position: relative;
-}
-
-.pricing .plan .plan-details p:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 140px;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  background-color: var(--main-color);
-}
-
-.pricing .plan .buy-btn {
-  padding: 30px 0;
-}
-
-.pricing .plan .buy-btn a {
-  display: block;
-  padding: 20px 20px;
-  text-decoration: none;
-  border: 1px solid var(--main-color);
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.pricing .contact-msg {
-  text-align: center;
-  margin: 50px auto 20px;
-  font-size: 20px;
-}
-
-.pricing .contact-msg+a {
-  display: block;
-  width: fit-content;
-  margin: 20px auto;
-  background-color: var(--main-color);
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-/* end pricing */
-/* start subscribe */
-.subscribe {
-  background-color: darkblue;
-  background-image: url('../images/subscribe.jpg');
-  background-size: cover;
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  position: relative;
-}
-.subscribe::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.subscribe .container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  position: relative;
-}
-.subscribe .email-field {
-  display: flex;
-  border: 1px white solid;
-  position: relative;
-  flex: 310;
-}
-.subscribe input[type='text'] {
-  padding: 20px 20px 20px 60px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  caret-color: white;
-  flex: 1;
-}
-.subscribe input[type='text']::placeholder {
-  color: white;
-  text-transform: capitalize;
-}
-.subscribe .email-field i {
-  color: white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 25px;
-  font-size: 1.2em;
-}
-.subscribe input[type='submit'] {
-  color: white;
-  background-color: var(--main-color);
-  border: none;
-  outline: none;
-  width: 130px;
-  padding: 10px 20px;
-}
-.subscribe p {
-  color: white;
-  flex: 3;
-}
-/* end subscribe */
-/* start stats */
-.stats {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: #b300ff;
-  background-image: url('../images/stats.png');
-  background-size: cover;
-  position: relative;
-}
-
-.stats::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.stats .container {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.stats .container .box {
-  padding: 50px;
-  color: white;
-  background-color: var(--transparent-main-color);
-  text-align: center;
-}
-
-/* mobile first principle */
-/* here, the property won't be overridden much in media */
-/* the mobile media will end at 767px, its stylings won't bother us later */
-@media (max-width: 767px) {
-  .stats .container .box {
-    flex-basis: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .stats .container .box {
-    flex-basis: 50%;
-  }
-}
-
-@media (min-width: 992px) {
-  .stats .container .box {
-    flex-basis: 25%;
-  }
-}
-
-.stats .container .box i {
-  background-color: black;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0 auto 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stats .container .box p:first-of-type {
-  font-size: 50px;
-  font-weight: bold;
-  margin: 0 0 20px;
-}
-
-.stats .container .box p:last-child {
-  font-size: 14px;
-}
-
-/* end stats */
 /* start quote */
 .quote {
   padding-top: var(--section-padding);
@@ -993,7 +769,7 @@ header nav form i {
 
 .quote q::after {
   /* content: close-quote; */
-  
+
   font-family: 'FontAwesome';
   /* content: '\f10e'; */
   position: absolute;
@@ -1001,11 +777,13 @@ header nav form i {
   right: -20px;
   transform: rotate(15deg);
 }
+
 @media (max-width: 767px) {
   .quote q::before {
     left: -5px;
     top: -30px;
   }
+
   .quote q::after {
     right: 0px;
     bottom: -30px;
@@ -1013,3 +791,324 @@ header nav form i {
 }
 
 /* end quote */
+/* start pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pricing .plans .plan .head {
+  padding: 40px 20px;
+  border-top: 1px var(--main-color) solid;
+}
+
+.pricing .plans .plan .head h3 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* normally, span elements aren't styled like or larger than headings */
+/* but as it is not an essay, and this is in a plan card, this can be an exception */
+.pricing .plans .plan .head .price {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.pricing .plans .plan .head .price::before {
+  content: '$';
+  position: relative;
+  font-size: 25px;
+  font-weight: normal;
+  top: -40px;
+  margin-right: 15px;
+}
+
+.pricing .plans .plan .head .price::after {
+  content: '/Mo';
+  position: relative;
+  font-size: 20px;
+  right: -15px;
+}
+
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+
+.pricing .plans .plan ul {
+  border-top: 1px var(--main-color) solid;
+}
+
+.pricing .plan ul li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: var(--main-color);
+}
+
+.pricing .plan .foot {
+  padding: 30px 0;
+  border-top: 1px var(--main-color) solid;
+}
+
+.pricing .plan .foot a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+.pricing .plan .foot a:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.pricing .contact-msg {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: transparent 1px solid;
+  transition: 0.3s;
+}
+
+.pricing .contact-link:hover {
+  border-color: var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+}
+
+/* end pricing */
+/* start subscribe */
+.subscribe {
+  background-color: darkblue;
+  background-image: url('../images/subscribe.jpg');
+  background-size: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+}
+
+.subscribe::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subscribe .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.subscribe form {
+  display: flex;
+  /* border: 1px white solid; */
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+
+.subscribe input[type='email'] {
+  padding: 20px 20px 20px 60px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  caret-color: white;
+  flex: 1;
+  border: solid 1px white;
+  border-right: none;
+}
+
+.subscribe input[type='email']::placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+
+.subscribe form i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 1.2em;
+}
+
+.subscribe input[type='submit'] {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  width: 130px;
+  padding: 10px 20px;
+  border: solid 1px white;
+  border-left: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.subscribe input[type='submit']:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+
+.subscribe p {
+  color: white;
+  line-height: 2;
+}
+
+/* end subscribe */
+/* start contact */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .content {
+  display: flex;
+  gap: 60px;
+}
+.contact .content form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact .content form input[type='text'],
+.contact .content form input[type='email'],
+.contact .content form textarea {
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.contact *::placeholder {
+  text-transform: capitalize;
+}
+.contact .content form textarea {
+  height: 200px;
+}
+.contact .content form input[type='submit'] {
+  align-self: flex-end;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  display: block;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* margin-left: auto; */
+}
+.contact .content .info .phone {
+  
+}
+.contact .content .info h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.contact .content .info .more-info h4 {
+  margin-top: 90px;
+}
+.contact .content .info li {
+  color: #777;
+  line-height: 2;
+}
+.contact .content .info .more-info li {
+  font-style: italic;
+}
+/* end contact */
+/* start footer */
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: darkblue;
+  background-image: url('../images/subscribe.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer .container {
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+footer .container .social {
+  margin: 40px 0 60px;
+}
+
+footer .container .social p {
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 20px;
+  border-bottom: 1px white solid;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+footer .social ul {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer .social ul i {
+  padding: 10px 0;
+}
+
+footer .copyright span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* end footer */
