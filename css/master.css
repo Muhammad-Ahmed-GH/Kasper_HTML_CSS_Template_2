@@ -722,6 +722,151 @@ header nav form i {
 }
 
 /* end stats */
+
+/* start our skills */
+.our-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.our-skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.our-skills .testimonials {
+  /* flex-basis: 500px; */
+  flex-basis: 45%;
+}
+
+.our-skills h3 {
+  margin: 0 0 30px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.our-skills h3+p {
+  color: #777;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.our-skills .cards .card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.our-skills .cards .card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.our-skills .cards .card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.our-skills .cards .card .text {
+  line-height: 1.8;
+  border-bottom: 1px solid #ccc;
+}
+
+.our-skills .cards .card .text .author {
+  display: block;
+  color: #777;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.our-skills .bullets {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 50px auto;
+}
+
+.our-skills .bullets li {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: #aaa solid 1px;
+}
+
+.our-skills .bullets li.active {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.our-skills .skills {
+  flex-basis: 500px;
+}
+
+.our-skills .skills .bars {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.our-skills .skills .bars li span {
+  text-transform: uppercase;
+}
+
+.our-skills .skills .bars li .bar {
+  background-color: #dedadc;
+  height: 30px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.our-skills .skills .bars li .bar .progress {
+  content: '';
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+}
+
+.our-skills .skills .bars li .bar .progress[value='90%'] {
+  width: 90%;
+}
+
+.our-skills .skills .bars li .bar .progress[value='85%'] {
+  width: 85%;
+}
+
+.our-skills .skills .bars li .bar .progress[value='80%'] {
+  width: 80%;
+}
+
+.our-skills .skills .bars li .bar .progress::before {
+  content: attr(value);
+  position: absolute;
+  bottom: calc(100% + 15px);
+  right: 0;
+  transform: translateX(50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.our-skills .skills .bars li .bar .progress::after {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 5px);
+  right: 0;
+  transform: translateX(50%);
+  border: 5px transparent solid;
+  border-top-color: black;
+}
+
+/* end our skills */
+
 /* start quote */
 .quote {
   padding-top: var(--section-padding);
@@ -920,7 +1065,6 @@ header nav form i {
   position: relative;
 }
 
-
 .subscribe::before {
   content: '';
   position: absolute;
@@ -931,7 +1075,6 @@ header nav form i {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
 .subscribe .container {
   display: flex;
   justify-content: center;
@@ -940,8 +1083,6 @@ header nav form i {
   position: relative;
 }
 
-.subscribe .email-field {
-
 .subscribe form {
   display: flex;
   /* border: 1px white solid; */
@@ -949,8 +1090,6 @@ header nav form i {
   width: 500px;
   max-width: 100%;
 }
-
-.subscribe input[type='text'] {
 
 .subscribe input[type='email'] {
   padding: 20px 20px 20px 60px;
@@ -964,14 +1103,10 @@ header nav form i {
   border-right: none;
 }
 
-.subscribe input[type='text']::placeholder {
-
 .subscribe input[type='email']::placeholder {
   color: white;
   text-transform: capitalize;
 }
-
-.subscribe .email-field i {
 
 .subscribe form i {
   color: white;
@@ -982,7 +1117,6 @@ header nav form i {
   font-size: 1.2em;
 }
 
-
 .subscribe input[type='submit'] {
   color: white;
   background-color: var(--main-color);
@@ -990,12 +1124,6 @@ header nav form i {
   outline: none;
   width: 130px;
   padding: 10px 20px;
-}
-
-  border: solid 1px white;
-  border-left: none;
-  transition: 0.3s;
-  cursor: pointer;
 }
 
 .subscribe input[type='submit']:hover {
@@ -1015,16 +1143,19 @@ header nav form i {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
+
 .contact .content {
   display: flex;
   gap: 60px;
 }
+
 .contact .content form {
   width: 70%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .contact .content form input[type='text'],
 .contact .content form input[type='email'],
 .contact .content form textarea {
@@ -1033,12 +1164,15 @@ header nav form i {
   outline: none;
   border: 1px solid #ccc;
 }
+
 .contact *::placeholder {
   text-transform: capitalize;
 }
+
 .contact .content form textarea {
   height: 200px;
 }
+
 .contact .content form input[type='submit'] {
   align-self: flex-end;
   background-color: var(--main-color);
@@ -1050,25 +1184,27 @@ header nav form i {
   cursor: pointer;
   /* margin-left: auto; */
 }
-.contact .content .info .phone {
-  
-}
+
 .contact .content .info h4 {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 20px;
 }
+
 .contact .content .info .more-info h4 {
   margin-top: 90px;
 }
+
 .contact .content .info li {
   color: #777;
   line-height: 2;
 }
+
 .contact .content .info .more-info li {
   font-style: italic;
 }
+
 /* end contact */
 /* start footer */
 footer {
@@ -1100,38 +1236,6 @@ footer .container .social {
   margin: 40px 0 60px;
 }
 
-.quote q::before {
-  /* content: open-quote; */
-
-  font-family: 'FontAwesome';
-  /* content: '\f10d'; */
-  position: absolute;
-  top: -20px;
-  left: -30px;
-  transform: rotate(15deg);
-}
-
-.quote q::after {
-  /* content: close-quote; */
-
-  font-family: 'FontAwesome';
-  /* content: '\f10e'; */
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  transform: rotate(15deg);
-}
-
-@media (max-width: 767px) {
-  .quote q::before {
-    left: -5px;
-    top: -30px;
-  }
-
-  .quote q::after {
-    right: 0px;
-    bottom: -30px;
-  }
 footer .container .social p {
   text-transform: uppercase;
   font-size: 22px;
@@ -1157,148 +1261,11 @@ footer .copyright span {
   font-weight: bold;
 }
 
-/* end quote */
-
-
-/* start our skills */
-.our-skills {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
-
-.our-skills .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.our-skills .testimonials {
-  /* flex-basis: 500px; */
-  flex-basis: 45%;
-}
-
-.our-skills h3 {
-  margin: 0 0 30px;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.our-skills h3+p {
-  color: #777;
-  line-height: 2;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.our-skills .cards .card {
-  display: flex;
-  gap: 50px;
-  align-items: center;
-}
-
-.our-skills .cards .card:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.our-skills .cards .card img {
-  width: 100px;
-  border-radius: 50%;
-}
-
-.our-skills .cards .card .text {
-  line-height: 1.8;
-  border-bottom: 1px solid #ccc;
-}
-
-.our-skills .cards .card .text .author {
-  display: block;
-  color: #777;
-  text-align: right;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.our-skills .bullets {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 50px auto;
-}
-
-.our-skills .bullets li {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: #aaa solid 1px;
-}
-
-.our-skills .bullets li.active {
-  background-color: var(--main-color);
-  border: none;
-}
-
-.our-skills .skills {
-  flex-basis: 500px;
-}
-
-.our-skills .skills .bars {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.our-skills .skills .bars li span {
-  text-transform: uppercase;
-}
-
-.our-skills .skills .bars li .bar {
-  background-color: #dedadc;
-  height: 30px;
-  margin-top: 15px;
-  position: relative;
-}
-
-.our-skills .skills .bars li .bar .progress {
-  content: '';
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: var(--main-color);
-}
-
-.our-skills .skills .bars li .bar .progress[value='90%'] {
-  width: 90%;
-}
-
-.our-skills .skills .bars li .bar .progress[value='85%'] {
-  width: 85%;
-}
-
-.our-skills .skills .bars li .bar .progress[value='80%'] {
-  width: 80%;
-}
-.our-skills .skills .bars li .bar .progress::before {
-  content: attr(value);
-  position: absolute;
-  bottom: calc(100% + 15px);
-  right: 0;
-  transform: translateX(50%);
-  background-color: black;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-}
-.our-skills .skills .bars li .bar .progress::after {
-  content: '';
-  position: absolute;
-  bottom: calc(100% + 5px);
-  right: 0;
-  transform: translateX(50%);
-  border: 5px transparent solid;
-  border-top-color: black;
-}
-
-/* end our skills */
 /* end footer */
+
+/* things to focus on
+  - negative margins
+  - aspect ratio
+  - font-family: 'FontAwesome' --> icon unicode
+  - height of parent when child inline -> block
+*/
