@@ -815,6 +815,7 @@ header nav form i {
   padding-bottom: var(--section-padding);
   position: relative;
 }
+
 .subscribe::before {
   content: '';
   position: absolute;
@@ -824,18 +825,21 @@ header nav form i {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .subscribe .container {
   display: flex;
   justify-content: center;
   gap: 50px;
   position: relative;
 }
+
 .subscribe .email-field {
   display: flex;
   border: 1px white solid;
   position: relative;
   flex: 310;
 }
+
 .subscribe input[type='text'] {
   padding: 20px 20px 20px 60px;
   background-color: transparent;
@@ -845,10 +849,12 @@ header nav form i {
   caret-color: white;
   flex: 1;
 }
+
 .subscribe input[type='text']::placeholder {
   color: white;
   text-transform: capitalize;
 }
+
 .subscribe .email-field i {
   color: white;
   position: absolute;
@@ -857,6 +863,7 @@ header nav form i {
   left: 25px;
   font-size: 1.2em;
 }
+
 .subscribe input[type='submit'] {
   color: white;
   background-color: var(--main-color);
@@ -865,10 +872,12 @@ header nav form i {
   width: 130px;
   padding: 10px 20px;
 }
+
 .subscribe p {
   color: white;
   flex: 3;
 }
+
 /* end subscribe */
 /* start stats */
 .stats {
@@ -993,7 +1002,7 @@ header nav form i {
 
 .quote q::after {
   /* content: close-quote; */
-  
+
   font-family: 'FontAwesome';
   /* content: '\f10e'; */
   position: absolute;
@@ -1001,11 +1010,13 @@ header nav form i {
   right: -20px;
   transform: rotate(15deg);
 }
+
 @media (max-width: 767px) {
   .quote q::before {
     left: -5px;
     top: -30px;
   }
+
   .quote q::after {
     right: 0px;
     bottom: -30px;
@@ -1013,3 +1024,18 @@ header nav form i {
 }
 
 /* end quote */
+
+
+/* start our skills */
+.our-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.our-skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* end our skills */
