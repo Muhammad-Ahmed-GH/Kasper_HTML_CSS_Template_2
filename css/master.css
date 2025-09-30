@@ -729,29 +729,35 @@ header nav form i {
   padding-bottom: var(--section-padding);
 }
 
-.our-skills .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+@media (min-width: 991px) {
+  .our-skills .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .our-skills .container>div {
+    flex-basis: 45%;
+  }
 }
 
-.our-skills .testimonials {
-  /* flex-basis: 500px; */
-  flex-basis: 45%;
-}
-
-.our-skills h3 {
+.our-skills .container > div > h3 {
   margin: 0 0 30px;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
 
-.our-skills h3+p {
-  color: #777;
+.our-skills .container > div > p {
+  color: var(--light-text-color);
   line-height: 2;
   text-align: center;
   margin-bottom: 60px;
+}
+
+.our-skills .cards {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
 
 .our-skills .cards .card {
@@ -760,23 +766,19 @@ header nav form i {
   align-items: center;
 }
 
-.our-skills .cards .card:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.our-skills .cards .card img {
+.our-skills .card img {
   width: 100px;
   border-radius: 50%;
 }
 
-.our-skills .cards .card .text {
+.our-skills .card .text {
   line-height: 1.8;
   border-bottom: 1px solid #ccc;
 }
 
-.our-skills .cards .card .text .author {
+.our-skills .card .text .author {
   display: block;
-  color: #777;
+  color: var(--light-text-color);
   text-align: right;
   font-size: 14px;
   margin-bottom: 10px;
@@ -801,10 +803,6 @@ header nav form i {
   border: none;
 }
 
-.our-skills .skills {
-  flex-basis: 500px;
-}
-
 .our-skills .skills .bars {
   display: flex;
   flex-direction: column;
@@ -822,7 +820,7 @@ header nav form i {
   position: relative;
 }
 
-.our-skills .skills .bars li .bar .progress {
+.our-skills .skills .bars li .bar .prog {
   content: '';
   height: 100%;
   position: absolute;
@@ -831,19 +829,7 @@ header nav form i {
   background-color: var(--main-color);
 }
 
-.our-skills .skills .bars li .bar .progress[value='90%'] {
-  width: 90%;
-}
-
-.our-skills .skills .bars li .bar .progress[value='85%'] {
-  width: 85%;
-}
-
-.our-skills .skills .bars li .bar .progress[value='80%'] {
-  width: 80%;
-}
-
-.our-skills .skills .bars li .bar .progress::before {
+.our-skills .skills .bars li .bar .prog::before {
   content: attr(value);
   position: absolute;
   bottom: calc(100% + 15px);
@@ -855,7 +841,7 @@ header nav form i {
   border-radius: 5px;
 }
 
-.our-skills .skills .bars li .bar .progress::after {
+.our-skills .skills .bars li .bar .prog::after {
   content: '';
   position: absolute;
   bottom: calc(100% + 5px);
@@ -1197,7 +1183,7 @@ header nav form i {
 }
 
 .contact .content .info li {
-  color: #777;
+  color: var(--light-text-color);
   line-height: 2;
 }
 

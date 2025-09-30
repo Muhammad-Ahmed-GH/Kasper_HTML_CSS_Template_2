@@ -282,25 +282,29 @@
           <li>
             <span>adobe</span>
             <div class="bar">
-              <div class="progress" value="90%"></div>
+              <div class="prog" style="width: 90%;" value="90%"></div>
+              <!-- We used inline style as we can't access the CSS file with JavaScript -->
+              <!-- But with JavaScript, I can access the DOM -->
+              <!-- this is because these values are not static. changing them will be awkward -->
+              <!-- and this is much better than setting a class for each value -->
             </div>
           </li>
           <li>
             <span>html & css</span>
             <div class="bar">
-              <div class="progress" value="85%"></div>
+              <div class="prog" style="width: 85%;" value="85%"></div>
             </div>
           </li>
           <li>
             <span>javascript</span>
             <div class="bar">
-              <div class="progress" value="80%"></div>
+              <div class="prog" style="width: 80%;" value="80%"></div>
             </div>
           </li>
           <li>
             <span>php</span>
             <div class="bar">
-              <div class="progress" value="90%"></div>
+              <div class="prog" style="width: 90%;" value="90%"></div>
             </div>
           </li>
         </ul>
