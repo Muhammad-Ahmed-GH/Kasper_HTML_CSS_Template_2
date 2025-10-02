@@ -213,6 +213,7 @@ header nav form {
   display: flex;
   align-items: center;
   justify-content: right;
+  cursor: pointer;
 }
 
 header nav form i {
@@ -1110,6 +1111,8 @@ header nav form i {
   outline: none;
   width: 130px;
   padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .subscribe input[type='submit']:hover {
@@ -1164,11 +1167,17 @@ header nav form i {
   background-color: var(--main-color);
   color: white;
   padding: 20px;
-  border: none;
+  border: 1px solid white;
   display: block;
   text-transform: uppercase;
   cursor: pointer;
   /* margin-left: auto; */
+  transition: 0.3s;
+}
+.contact .content form input[type='submit']:hover {
+  color: var(--main-color);
+  background-color: white;
+  border-color: var(--main-color);
 }
 
 .contact .content .info h4 {
@@ -1238,8 +1247,11 @@ footer .social ul {
   gap: 30px;
 }
 
-footer .social ul i {
+footer .social ul a {
+  display: block;
   padding: 10px 0;
+  color: white;
+  text-decoration: none;
 }
 
 footer .copyright span {
