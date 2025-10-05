@@ -741,14 +741,14 @@ header nav form i {
   }
 }
 
-.our-skills .container > div > h3 {
+.our-skills .container>div>h3 {
   margin: 0 0 30px;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
 
-.our-skills .container > div > p {
+.our-skills .container>div>p {
   color: var(--light-text-color);
   line-height: 2;
   text-align: center;
@@ -1067,6 +1067,16 @@ header nav form i {
   /* to be on the overlay */
 }
 
+@media (max-width: 767px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+
+  .subscribe p {
+    text-align: center;
+  }
+}
+
 .subscribe form {
   display: flex;
   /* border: 1px white solid; */
@@ -1075,9 +1085,18 @@ header nav form i {
   max-width: 100%;
 }
 
+.subscribe form i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 1.2em;
+}
+
 .subscribe input[type='email'] {
   padding: 20px 20px 20px 60px;
-  background-color: transparent;
+  background: none;
   border: none;
   outline: none;
   color: white;
@@ -1090,15 +1109,7 @@ header nav form i {
 .subscribe input[type='email']::placeholder {
   color: white;
   text-transform: capitalize;
-}
-
-.subscribe form i {
-  color: white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 25px;
-  font-size: 1.2em;
+  font-family: inherit;
 }
 
 .subscribe input[type='submit'] {
@@ -1121,7 +1132,6 @@ header nav form i {
   color: white;
   line-height: 2;
 }
-
 
 /* end subscribe */
 /* start contact */
@@ -1171,6 +1181,7 @@ header nav form i {
   /* margin-left: auto; */
   transition: 0.3s;
 }
+
 .contact .content form input[type='submit']:hover {
   color: var(--main-color);
   background-color: white;
