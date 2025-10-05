@@ -804,12 +804,6 @@ header nav form i {
   border: none;
 }
 
-.our-skills .skills .bars {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 .our-skills .skills .bars li span {
   text-transform: uppercase;
 }
@@ -818,6 +812,7 @@ header nav form i {
   background-color: #dedadc;
   height: 30px;
   margin-top: 15px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -1066,8 +1061,10 @@ header nav form i {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* to prevent stretch */
   gap: 50px;
   position: relative;
+  /* to be on the overlay */
 }
 
 .subscribe form {
