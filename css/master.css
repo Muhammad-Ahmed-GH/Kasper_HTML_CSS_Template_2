@@ -1142,26 +1142,34 @@ header nav form i {
 
 .contact .content {
   display: flex;
-  gap: 60px;
+  /* gap: 60px; */
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+  }
 }
 
 .contact .content form {
-  width: 70%;
-  display: flex;
+  /* width: 70%; */
+  flex-basis: 70%;
+  /* display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px; */
 }
 
-.contact .content form input[type='text'],
-.contact .content form input[type='email'],
-.contact .content form textarea {
+.contact .main-input {
+  display: block;
   width: 100%;
   padding: 20px;
   outline: none;
   border: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 
-.contact *::placeholder {
+.contact .main-input::placeholder {
   text-transform: capitalize;
 }
 
@@ -1170,12 +1178,14 @@ header nav form i {
 }
 
 .contact .content form input[type='submit'] {
-  align-self: flex-end;
   background-color: var(--main-color);
   color: white;
   padding: 20px;
   border: 1px solid white;
-  display: block;
+  /* to align the item ... */
+  display: flex;
+  margin-left: auto;
+  /* ... to the right */
   text-transform: uppercase;
   cursor: pointer;
   /* margin-left: auto; */
@@ -1188,24 +1198,46 @@ header nav form i {
   border-color: var(--main-color);
 }
 
+.contact .content .info {
+  flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+  .contact .info {
+    order: -1;
+    text-align: center;
+  }
+}
+
 .contact .content .info h4 {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.contact .content .info .more-info h4 {
+.contact .content .info .address h4 {
   margin-top: 90px;
 }
+@media (max-width: 767px) {
+  .contact .content .info .address h4 {
+    margin-top: 30px;
+  }
+}
 
-.contact .content .info li {
+.contact .info .phone li {
+  color: var(--light-text-color);
+  margin-bottom: 10px;
+}
+
+.contact .info .address address {
   color: var(--light-text-color);
   line-height: 2;
 }
-
-.contact .content .info .more-info li {
-  font-style: italic;
+@media (max-width: 767px) {
+  .contact .info .address address {
+    margin-bottom: 50px;
+  }
 }
 
 /* end contact */
